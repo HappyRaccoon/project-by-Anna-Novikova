@@ -3,30 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
     <title>Document</title>
-    <link rel="stylesheet/less" type="text/less" href="css/main.less">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet/less" type="text/less" href="css/main.less">
 	<script src="js/less.js"></script>
 </head>
 <body>
+    <nav id="mainmenu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <ul class="list-inline">
+                <li><a href="#caloric-calculation">Расчет калорифности</a></li>
+                <li><a href="#pfc-calculation">Расчет БЖУ</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
     <div id="caloric-calculation">
-       
-        <p>Введите Ваш вес</p>
-        <input name="weight" type="text"><br>
-        <p>Введите Ваш рост</p>
-        <input name="height" type="text"><br>
-        <p>Введите Ваш возраст</p>
-        <input name="age" type="text"><br>
-        <p>Укажите Вашу активность</p>
-        <select name="" id="">
-            <option value="1.20">Низкая(сидячий образ жизни)</option>
-            <option value="1.38">Малая(1-3 раза в неделю легкие тренировки)</option>
-            <option value="1.55">Средняя(1-5 раз в неделю умеренные тренировки)</option>
-            <option value="1.73">Высокая(5-7 раз в неделю интенсивные тренировки)</option>
-        </select>
-        <input type="submit" onclick="" value="Расчитать!">
-        
+        <div class="container">
+            <h2>Расчет калорийности</h2>
+            <p>Введите Ваш вес (кг)</p>
+            <input name="weight" type="text"><br>
+            <p>Введите Ваш рост (см)</p>
+            <input name="height" type="text"><br>
+            <p>Введите Ваш возраст</p>
+            <input name="age" type="text"><br>
+            <p>Укажите Вашу активность</p>
+            <select name="activity">
+                <option disabled selected>---</option>
+                <option value="1.20">Низкая(сидячий образ жизни)</option>
+                <option value="1.38">Малая(1-3 раза в неделю легкие тренировки)</option>
+                <option value="1.55">Средняя(1-5 раз в неделю умеренные тренировки)</option>
+                <option value="1.73">Высокая(5-7 раз в неделю интенсивные тренировки)</option>
+            </select><br>
+            <input type="button" name="first" onclick="caloricCalculation()" value="Расчитать!"><br>
+            <p>Ваша ежедневная калорийность для поддержания веса должна составлять:</p>
+            <input type="text" name="caloricity"><span>ккал</span><br>
+            <p>Ваша ежедневная калорийность для похудения:</p>
+            <input type="text" name="lower-caloricity"><span>ккал</span>
+        </div>
     </div>
+
+    <div id="pfc-calculation">
+        <div class="container">
+            <h2>Расчет БЖУ</h2>
+            Для того, что бы расчитать количество белков, жиров и углеводов,необходимых для ежедневного употребления, введите калорийность Вашего рациона:
+            <input type="text" name="calories"><br>
+            <input type="button" name="second" onclick="nutrientsCalculation()" value="Расчитать!"><br>
+            <p>Белки</p>
+            <input type="text" name="proteins"><br>
+            <p>Жиры</p>
+            <input type="text" name="fats"><br>
+            <p>Углеводы</p>
+            <input type="text" name="carbohydrates">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
