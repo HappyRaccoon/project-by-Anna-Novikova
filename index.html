@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet/less" type="text/less" href="css/main.less">
@@ -12,15 +12,14 @@
 <body>
     <nav id="mainmenu" class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <ul class="list-inline">
-                <li><a href="#caloric-calculation">Расчет калорифности</a></li>
-                <li><a href="#pfc-calculation">Расчет БЖУ</a></li>
-            </ul>
-            
+            <ul class="list-inline" role="menu">
+                <li><a href="#caloric-calculation" class="active">Расчет калорифности</a></li>
+                <li><a href="#nutrients-сalculation">Расчет БЖУ</a></li>
+            </ul>  
         </div>
     </nav>
 
-    <div id="caloric-calculation">
+    <section class="section" id="caloric-calculation">
         <div class="container">
             <h2>Расчет калорийности</h2>
             <p>Введите Ваш вес (кг)</p>
@@ -39,16 +38,17 @@
             </select><br>
             <input type="button" name="first" onclick="caloricCalculation()" value="Расчитать!"><br>
             <p>Ваша ежедневная калорийность для поддержания веса должна составлять:</p>
-            <input type="text" name="caloricity"><span>ккал</span><br>
+            <input type="text" name="caloricity"><br>
             <p>Ваша ежедневная калорийность для похудения:</p>
-            <input type="text" name="lower-caloricity"><span>ккал</span>
+            <input type="text" name="lower-caloricity"><br>
+            <input type="button" name="first-clear" onclick="firstClearButton()" value="Очистить">
         </div>
-    </div>
+    </section>
 
-    <div id="pfc-calculation">
+    <section class="section" id="nutrients-сalculation">
         <div class="container">
             <h2>Расчет БЖУ</h2>
-            Для того, что бы расчитать количество белков, жиров и углеводов,необходимых для ежедневного употребления, введите калорийность Вашего рациона:
+            <p>Для того, что бы расчитать количество белков, жиров и углеводов,необходимых для ежедневного употребления, введите калорийность Вашего рациона:</p>
             <input type="text" name="calories"><br>
             <input type="button" name="second" onclick="nutrientsCalculation()" value="Расчитать!"><br>
             <p>Белки</p>
@@ -56,13 +56,16 @@
             <p>Жиры</p>
             <input type="text" name="fats"><br>
             <p>Углеводы</p>
-            <input type="text" name="carbohydrates">
+            <input type="text" name="carbohydrates"><br>
+            <input type="button" name="second-clear" onclick="secondClearButton()" value="Очистить">
         </div>
-    </div>
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/my-jquery.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
