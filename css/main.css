@@ -1,7 +1,17 @@
-@main:#e3ffdc;
-
 #caloric-calculation {
     margin-top: 100px;
+}
+nav {
+    opacity: .5;
+    height: 70px;
+}
+nav ul {
+    margin-top: 1.65%;
+}
+nav ul li {
+    color: #49743d;
+    font-size: 20px;
+    font-weight: bold;
 }
 body {
     background: url(../img/2.1.jpg) no-repeat center center fixed;
@@ -27,27 +37,10 @@ input[type='button'] {
     border-radius: 10px;
 }
 h2 {
-    color: @main;
+    color: #e3ffdc;
     font-size: 30px;
 }
 p {
-    color: @main;
+    color: #e3ffdc;
     font-size: 16px;
 }
-// .mainmenu { 
-// 	z-index: 999999;
-//     width:100%;
-//     padding: 30px 0 0 0;
-// }
-
-// .section { 
-// 	z-index: 1;
-// 	min-height:420px;
-// 	width: 100%; 
-// 	overflow:auto;
-// 	height:100%;
-// 	padding-top:100px;
-// 	padding-bottom:50px; 
-// 	display:none;
-// 	top:0;
-// }
