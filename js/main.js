@@ -1,3 +1,4 @@
+// калькулятор каллорий
 function caloricCalculation() {
     var weight = document.getElementsByName('weight')[0].value;
     var height = document.getElementsByName('height')[0].value;
@@ -8,7 +9,7 @@ function caloricCalculation() {
     var lowerCaloricity = caloricity * 0.8;
     document.getElementsByName('lower-caloricity')[0].value = Math.round(lowerCaloricity) + ' ккал';
 }
-
+// расчет БЖУ
 function nutrientsCalculation() {
     var calories = document.getElementsByName('calories')[0].value;
     var proteins = calories * 0.3 / 4;
@@ -18,7 +19,7 @@ function nutrientsCalculation() {
     document.getElementsByName('fats')[0].value = Math.round(fats);
     document.getElementsByName('carbohydrates')[0].value = Math.round(carbohydrates);
 }
-
+// кнопки очищения инпутов
 function firstClearButton() {
     var inputs = document.querySelectorAll('#caloric-calculation input');
     for (var i=0; i<inputs.length; i++) { 
@@ -27,7 +28,6 @@ function firstClearButton() {
         }
     }
 }
-
 function secondClearButton() {
     var inputs = document.querySelectorAll('#nutrients-сalculation input');
     for (var i=0; i<inputs.length; i++) { 
